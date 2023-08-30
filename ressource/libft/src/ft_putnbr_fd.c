@@ -12,20 +12,19 @@
 
 #include "../include/libft.h"
 
-// Write N dans FD
-int	ft_putnbr_fd(long long n, int fd)
+int ft_putnbr_fd(long long n, int fd)
 {
-	char	c;
+        char c;
 
-	if (n < 0)
-	{
-		c = '-';
-		write(fd, &c, 1);
-		n = -n;
-	}
-	if (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
-	c = 48 + (n % 10);
-	write(fd, &c, 1);
-	return (1);
+        if (n < 0)
+        {
+                c = '-';
+                write(fd, &c, 1);
+                n = -n;
+        }
+        if (n >= 10)
+                ft_putnbr_fd(n / 10, fd);
+        c = 48 + (n % 10);
+        write(fd, &c, 1);
+        return (1);
 }

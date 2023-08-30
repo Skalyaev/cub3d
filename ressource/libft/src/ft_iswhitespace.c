@@ -12,11 +12,9 @@
 
 #include "../include/libft.h"
 
-// Return 1 si C is whitespace, sinon 0
-int	ft_iswhitespace(char c)
+int ft_iswhitespace(char c)
 {
-	if (c != ' ' && c != '\t' && c != '\n'
-		&& c != '\r' && c != 'v' && c != 'f')
-		return (0);
-	return (1);
+        if (c != ' ' && c != '\t' && c != '\n' && c != '\r' && c != 'v' && c != 'f')
+                return (0);
+        return (1);
 }

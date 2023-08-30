@@ -12,14 +12,13 @@
 
 #include "../include/libft.h"
 
-// Free TAB et son contenu
-int	free_str_tab2(char **tab)
+int free_str_tab2(char **tab)
 {
-	int	i;
+        int i;
 
-	i = -1;
-	while (tab[++i])
-		free(tab[i]);
-	free(tab);
-	return (0);
+        i = -1;
+        while (tab[++i])
+                free(tab[i]);
+        free(tab);
+        return (0);
 }

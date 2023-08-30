@@ -12,24 +12,23 @@
 
 #include "../include/libft.h"
 
-// Malloc & return une copie de S
-char	*ft_strdup(const char *s)
+char *ft_strdup(const char *s)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	char	*str;
+        size_t i;
+        size_t j;
+        size_t k;
+        char *str;
 
-	i = 0;
-	while (s[i])
-		i++;
-	str = malloc(i + 1);
-	if (!str)
-		return (NULL);
-	j = -1;
-	k = -1;
-	while (i--)
-		str[++j] = s[++k];
-	str[++j] = s[++k];
-	return (str);
+        i = 0;
+        while (s[i])
+                i++;
+        str = malloc(i + 1);
+        if (!str)
+                return (NULL);
+        j = -1;
+        k = -1;
+        while (i--)
+                str[++j] = s[++k];
+        str[++j] = s[++k];
+        return (str);
 }

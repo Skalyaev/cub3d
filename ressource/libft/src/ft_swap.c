@@ -12,12 +12,11 @@
 
 #include "../include/libft.h"
 
-// Echange les valeurs int de PTR1 et PTR2
-void	ft_swap(int *ptr1, int *ptr2)
+void ft_swap(int *ptr1, int *ptr2)
 {
-	int	temp;
+        int temp;
 
-	temp = *ptr1;
-	*ptr1 = *ptr2;
-	*ptr2 = temp;
+        temp = *ptr1;
+        *ptr1 = *ptr2;
+        *ptr2 = temp;
 }

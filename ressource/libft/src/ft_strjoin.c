@@ -12,29 +12,28 @@
 
 #include "../include/libft.h"
 
-// Malloc & return un char* qui contient S1 suivi de S2
-char	*ft_strjoin(const char *s1, const char *s2)
+char *ft_strjoin(const char *s1, const char *s2)
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+        size_t i;
+        size_t j;
+        char *str;
 
-	i = 0;
-	j = 0;
-	while (s1[i])
-		i++;
-	while (s2[j])
-		j++;
-	str = malloc(i + j + 1);
-	if (!str)
-		return (NULL);
-	i = -1;
-	j = -1;
-	while (s1[++j])
-		str[++i] = s1[j];
-	j = -1;
-	while (s2[++j])
-		str[++i] = s2[j];
-	str[++i] = '\0';
-	return (str);
+        i = 0;
+        j = 0;
+        while (s1[i])
+                i++;
+        while (s2[j])
+                j++;
+        str = malloc(i + j + 1);
+        if (!str)
+                return (NULL);
+        i = -1;
+        j = -1;
+        while (s1[++j])
+                str[++i] = s1[j];
+        j = -1;
+        while (s2[++j])
+                str[++i] = s2[j];
+        str[++i] = '\0';
+        return (str);
 }

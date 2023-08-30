@@ -12,10 +12,7 @@
 
 #include "../include/libft.h"
 
-// Return 1 si C est un caractère ASCII, sinon 0
-int	ft_isascii(int c)
+int ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+        return ((c >= 0 && c <= 127));
 }

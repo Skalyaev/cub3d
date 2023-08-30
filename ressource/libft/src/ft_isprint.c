@@ -12,10 +12,7 @@
 
 #include "../include/libft.h"
 
-// Return 1 si C est un caractère affichable, sinon 0
-int	ft_isprint(int c)
+int ft_isprint(int c)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	return (0);
+        return (c > 31 && c < 127);
 }

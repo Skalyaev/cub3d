@@ -12,10 +12,9 @@
 
 #include "../include/libft.h"
 
-// Return la valeur int lowercase d'un caractère uppercase
-int	ft_toupper(int c)
+int ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
+        if (c >= 'a' && c <= 'z')
+                c -= 32;
+        return (c);
 }

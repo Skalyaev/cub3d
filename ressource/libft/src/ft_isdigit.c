@@ -12,10 +12,7 @@
 
 #include "../include/libft.h"
 
-// Return 1 si C est un caractère numérique, sinon 0
-int	ft_isdigit(int c)
+int ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+        return (c >= 48 && c <= 57);
 }

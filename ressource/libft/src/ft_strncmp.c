@@ -12,15 +12,14 @@
 
 #include "../include/libft.h"
 
-// Return 1 si TO_FIND est dans les N premiers char de SRC, sinon 0
-int	ft_strncmp(char *src, char *to_find, int n)
+int ft_strncmp(char *src, char *to_find, int n)
 {
-	int	i;
+        int i;
 
-	i = 0;
-	while (i < n && src[i] && to_find[i] && src[i] == to_find[i])
-		i++;
-	if (i == n || !to_find[i])
-		return (1);
-	return (0);
+        i = 0;
+        while (i < n && src[i] && to_find[i] && src[i] == to_find[i])
+                i++;
+        if (i == n || !to_find[i])
+                return (1);
+        return (0);
 }

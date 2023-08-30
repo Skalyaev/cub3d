@@ -12,26 +12,25 @@
 
 #include "../include/libft.h"
 
-// Return un long long à partir de NPTR
-long long	ft_atoi(const char *nptr)
+long long ft_atoi(const char *nptr)
 {
-	long long	nbr;
-	int			neg;
-	int			i;
+        long long nbr;
+        int neg;
+        int i;
 
-	nbr = 0;
-	neg = 1;
-	i = 0;
-	if (nptr[i] == '-')
-	{
-		neg *= -1;
-		i++;
-	}
-	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		nbr *= 10;
-		nbr += (long long)nptr[i] - 48;
-		i++;
-	}
-	return (nbr * neg);
+        nbr = 0;
+        neg = 1;
+        i = 0;
+        if (nptr[i] == '-')
+        {
+                neg *= -1;
+                i++;
+        }
+        while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
+        {
+                nbr *= 10;
+                nbr += (long long)nptr[i] - 48;
+                i++;
+        }
+        return (nbr * neg);
 }

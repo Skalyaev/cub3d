@@ -12,98 +12,66 @@
 
 #include "../../include/header.h"
 
-void	move_left(void)
+void move_left(void)
 {
-	float	value;
+        float value;
 
-	if ((data())->move_left && ++(data())->moved)
-	{
-		value = (((data())->dir_x * cos(M_PI / 2)
-					- (data())->dir_y * sin(M_PI / 2)) * SIDE_SPEED);
-		if ((data())->pos_x + value < (data())->map.map_size
-			&& (data())->pos_x + value >= 0
-			&& (data())->map.map[(int)((data())->pos_x + value)]
-			[(int)(data())->pos_y] != 2)
-			(data())->pos_x += value;
-		value = (((data())->dir_x * sin(M_PI / 2)
-					+ (data())->dir_y * cos(M_PI / 2)) * SIDE_SPEED);
-		if ((data())->pos_y + value >= 0
-			&& (data())->map.map[(int)(data())->pos_x]
-			[(int)((data())->pos_y + value)] != -1
-			&& (data())->map.map[(int)(data())->pos_x]
-			[(int)((data())->pos_y + value)] != 2)
-			(data())->pos_y += value;
-	}
-	turn_right();
+        if ((data())->move_left && ++(data())->moved)
+        {
+                value = (((data())->dir_x * cos(M_PI / 2) - (data())->dir_y * sin(M_PI / 2)) * SIDE_SPEED);
+                if ((data())->pos_x + value < (data())->map.map_size && (data())->pos_x + value >= 0 && (data())->map.map[(int)((data())->pos_x + value)][(int)(data())->pos_y] != 2)
+                        (data())->pos_x += value;
+                value = (((data())->dir_x * sin(M_PI / 2) + (data())->dir_y * cos(M_PI / 2)) * SIDE_SPEED);
+                if ((data())->pos_y + value >= 0 && (data())->map.map[(int)(data())->pos_x][(int)((data())->pos_y + value)] != -1 && (data())->map.map[(int)(data())->pos_x][(int)((data())->pos_y + value)] != 2)
+                        (data())->pos_y += value;
+        }
+        turn_right();
 }
 
-void	move_right(void)
+void move_right(void)
 {
-	float	value;
+        float value;
 
-	if ((data())->move_right && ++(data())->moved)
-	{
-		value = (((data())->dir_x * cos(M_PI / -2)
-					- (data())->dir_y * sin(M_PI / -2)) * SIDE_SPEED);
-		if ((data())->pos_x + value < (data())->map.map_size
-			&& (data())->pos_x + value >= 0
-			&& (data())->map.map
-			[(int)((data())->pos_x + value)][(int)(data())->pos_y] != 2)
-			(data())->pos_x += value;
-		value = (((data())->dir_x * sin(M_PI / -2)
-					+ (data())->dir_y * cos(M_PI / -2)) * SIDE_SPEED);
-		if ((data())->pos_y + value >= 0
-			&& (data())->map.map
-			[(int)(data())->pos_x][(int)((data())->pos_y + value)] != -1
-			&& (data())->map.map
-			[(int)(data())->pos_x][(int)((data())->pos_y + value)] != 2)
-			(data())->pos_y += value;
-	}
-	move_left();
+        if ((data())->move_right && ++(data())->moved)
+        {
+                value = (((data())->dir_x * cos(M_PI / -2) - (data())->dir_y * sin(M_PI / -2)) * SIDE_SPEED);
+                if ((data())->pos_x + value < (data())->map.map_size && (data())->pos_x + value >= 0 && (data())->map.map[(int)((data())->pos_x + value)][(int)(data())->pos_y] != 2)
+                        (data())->pos_x += value;
+                value = (((data())->dir_x * sin(M_PI / -2) + (data())->dir_y * cos(M_PI / -2)) * SIDE_SPEED);
+                if ((data())->pos_y + value >= 0 && (data())->map.map[(int)(data())->pos_x][(int)((data())->pos_y + value)] != -1 && (data())->map.map[(int)(data())->pos_x][(int)((data())->pos_y + value)] != 2)
+                        (data())->pos_y += value;
+        }
+        move_left();
 }
 
-void	move_down(void)
+void move_down(void)
 {
-	float	value;
+        float value;
 
-	if ((data())->move_down && ++(data())->moved)
-	{
-		value = (data())->dir_x * BWD_SPEED;
-		if ((data())->pos_x - value < (data())->map.map_size
-			&& (data())->pos_x - value >= 0
-			&& (data())->map.map[(int)((data())->pos_x - value)]
-			[(int)(data())->pos_y] != 2)
-			(data())->pos_x -= value;
-		value = (data())->dir_y * BWD_SPEED;
-		if ((data())->pos_y - value >= 0
-			&& (data())->map.map[(int)(data())->pos_x]
-			[(int)((data())->pos_y - value)] != -1
-			&& (data())->map.map[(int)(data())->pos_x]
-			[(int)((data())->pos_y - value)] != 2)
-			(data())->pos_y -= value;
-	}
-	move_right();
+        if ((data())->move_down && ++(data())->moved)
+        {
+                value = (data())->dir_x * BWD_SPEED;
+                if ((data())->pos_x - value < (data())->map.map_size && (data())->pos_x - value >= 0 && (data())->map.map[(int)((data())->pos_x - value)][(int)(data())->pos_y] != 2)
+                        (data())->pos_x -= value;
+                value = (data())->dir_y * BWD_SPEED;
+                if ((data())->pos_y - value >= 0 && (data())->map.map[(int)(data())->pos_x][(int)((data())->pos_y - value)] != -1 && (data())->map.map[(int)(data())->pos_x][(int)((data())->pos_y - value)] != 2)
+                        (data())->pos_y -= value;
+        }
+        move_right();
 }
 
-void	move_up(void)
+void move_up(void)
 {
-	float	value;
+        float value;
 
-	if ((data())->move_up && ++(data())->moved)
-	{
-		value = (data())->dir_x * FWD_SPEED;
-		if ((data())->pos_x + value < (data())->map.map_size
-			&& (data())->pos_x + value >= 0
-			&& (data())->map.map[(int)((data())->pos_x + value)]
-			[(int)(data())->pos_y] != 2)
-			(data())->pos_x += value;
-		value = (data())->dir_y * FWD_SPEED;
-		if ((data())->pos_y + value >= 0
-			&& (data())->map.map[(int)(data())->pos_x]
-			[(int)((data())->pos_y + value)] != -1
-			&& (data())->map.map[(int)(data())->pos_x]
-			[(int)((data())->pos_y + value)] != 2)
-			(data())->pos_y += value;
-	}
-	move_down();
+        if ((data())->move_up && ++(data())->moved)
+        {
+                value = (data())->dir_x * FWD_SPEED;
+                if ((data())->pos_x + value < (data())->map.map_size && (data())->pos_x + value >= 0 && (data())->map.map[(int)((data())->pos_x + value)][(int)(data())->pos_y] != 2)
+                        (data())->pos_x += value;
+                value = (data())->dir_y * FWD_SPEED;
+                if ((data())->pos_y + value >= 0 && (data())->map.map[(int)(data())->pos_x][(int)((data())->pos_y + value)] != -1 && (data())->map.map[(int)(data())->pos_x][(int)((data())->pos_y + value)] != 2)
+                        (data())->pos_y += value;
+        }
+        move_down();
 }

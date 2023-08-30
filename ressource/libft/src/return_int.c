@@ -12,18 +12,16 @@
 
 #include "../include/libft.h"
 
-// Return N1 ou N2 selon qui est le plus grand
-int	return_max(int n1, int n2)
+int return_max(int n1, int n2)
 {
-	if (n1 > n2)
-		return (n1);
-	return (n2);
+        if (n1 > n2)
+                return (n1);
+        return (n2);
 }
 
-// Return N1 ou N2 selon qui est le plus petit
-int	return_min(int n1, int n2)
+int return_min(int n1, int n2)
 {
-	if (n1 < n2)
-		return (n1);
-	return (n2);
+        if (n1 < n2)
+                return (n1);
+        return (n2);
 }
