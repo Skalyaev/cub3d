@@ -1,4 +1,4 @@
-# Cub3d
+# cub3D
 "My first RayCaster with miniLibX"
 
 This project’s objectives are similar to all this first year’s objectives: Rigor, use of C, use of basic algorithms, information research etc.
