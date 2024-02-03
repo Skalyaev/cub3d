@@ -6,12 +6,10 @@ CFLAGS		= -Wall -Wextra -Werror -fsanitize=address
 INCLUDE_DIR	= include
 HEADER_EXT	= h
 HEADER		= $(shell find $(INCLUDE_DIR) -type f -name "*.$(HEADER_EXT)")
-HEADER_COUNT	= $(shell find $(INCLUDE_DIR) -type f -name "*.$(HEADER_EXT)" | wc -l)
-LIB		= ressource/libft/libft.a mlx_linux/ -lmlx -lXext -lX11
+LIB		=  mlx_linux/ -lmlx -lXext -lX11 -lm ressource/libft/libft.a
 
 SRC_DIR		= src
 SRC_EXT		= c
-SRC_COUNT	= $(shell find $(SRC_DIR) -type f -name "*.$(SRC_EXT)" | wc -l)
 SRC		= $(shell find $(SRC_DIR) -type f -name "*.$(SRC_EXT)")
 
 OBJ_DIR		= obj
@@ -22,18 +20,8 @@ RM		= rm -rf
 
 all		: ${NAME}
 
-ifeq ($(HEADER_COUNT), 1)
-ifeq ($(SRC_COUNT), 13)
 ${NAME}		: make_libft make_mlx $(OBJ_DIR) $(OBJ_SUBDIR) ${OBJ}
-		${CC} ${CFLAGS} ${OBJ} -L. ${LIB} -o ${NAME}
-else
-$(NAME)		:
-		@echo "Srcs corrupted, aborting"
-endif
-else
-$(NAME)		:
-		@echo "Srcs corrupted, aborting"
-endif
+		${CC} ${CFLAGS} -o ${NAME} ${OBJ} -L ${LIB}
 
 make_libft	:
 		cd ressource/libft && make
