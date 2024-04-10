@@ -1,19 +1,63 @@
 # cub3D
-> *My first RayCaster with miniLibX*
+> *Ce projet est inspiré du jeu Wolfenstein 3D, considéré comme le premier FPS jamais développé. Il vous permettra d'explorer la technique du raycasting.*
 
-*This project is inspired by the world-famous Wolfenstein 3D game, which was the first FPS ever.*
-*It will enable you to explore ray-casting.*
-*Your goal will be to make a dynamic view inside a maze, in which you’ll have to find your way.*
+Les objectifs de ce projet sont similaires à ceux de tous les autres projets et incluent la rigueur, l'utilisation du langage C, l'application d'algorithmes de base, la recherche d'informations, etc.
 
-## Objectives
-This project’s objectives are similar to all this first year’s objectives: Rigor, use of C, use of basic algorithms, information research etc.
-As a graphic design project, cub3D will enable you to improve your skills in these areas: windows, colors, events, fill shapes, etc.
-To conclude cub3D is a remarkable playground to explore the playful practical applications of mathematics without having to understand the specifics.
-With the help of the numerous documents available on the internet, you will use mathematics as a tool to create elegant and efficient algorithms.
+En tant que projet de conception graphique, Cub3D vous permettra de développer vos talents de designer : fenêtres, couleurs, événements, formes, etc.
+
+En conclusion, Cub3D offre une plateforme remarquable pour explorer les applications pratiques des mathématiques sans avoir à en comprendre toutes les spécificités. Grâce aux nombreux documents disponibles sur internet, vous utiliserez les mathématiques comme outil pour créer des algorithmes élégants et efficaces.
+
+## Preview
+![](https://github.com/Skalyaeve/images/blob/main/screenshot/solong.gif)
+
+## Install
+```bash
+sudo apt update -y
+sudo apt install -y unzip
+sudo apt install -y gcc
+sudo apt install -y make
+sudo apt install -y libxext-dev
+sudo apt install -y libx11-dev
+sudo apt install -y libbsd-dev
+```
+```bash
+mkdir -p $HOME/.local/bin
+mkdir -p $HOME/.local/share
+mkdir -p $HOME/.local/src
+mkdir -p $HOME/.local/include
+```
+```bash
+link=Skalyaeve/cub3d
+name=cub3d
+
+git clone https://github.com/$link.git $name
+cd $name && unzip mlx && make && make clean
+
+ln -s $PWD/$name $HOME/.local/bin/$name
+ln -s $PWD/resource $HOME/.local/share/$name
+ln -s $PWD/src $HOME/.local/src/$name
+ln -s $PWD/include $HOME/.local/include/$name
+```
+
+## Usage
+```bash
+export PATH=$HOME/.local/bin:$PATH
+cub3d <map>
+```
+
+## Uninstall
+```bash
+name=cub3d
+
+rm -r $name
+rm $HOME/.local/bin/$name
+rm $HOME/.local/share/$name
+rm $HOME/.local/src/$name
+rm $HOME/.local/include/$name
+```
 
 ## Usage
 ```sh
-sudo apt install libxext-dev libx11-dev libbsd-dev
 git clone git@github.com:Skalyaeve/cub3d.git
 cd cub3d
 make

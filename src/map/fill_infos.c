@@ -83,6 +83,20 @@ int texture_path_finded(char *str, int *i, char ref)
         while (str[*i + ++j] && str[*i + j] != '\n')
                 path[j] = str[*i + j];
         path[j] = '\0';
+        if (path[0] && path[0] == '~')
+        {
+            char *home = getenv("HOME");
+            char *tmp = malloc(sizeof(char) * (ft_strlen(home) + ft_strlen(path) + 1));
+            if (!tmp && ft_putstr_fd("Error\nMalloc failed\n", 2))
+                return (0);
+            strcpy(tmp, home);
+            strcat(tmp, path + 1);
+            free(path);
+            path = strdup(tmp);
+            if (!path && ft_putstr_fd("Error\nMalloc failed\n", 2))
+                return (0);
+            free(tmp);
+        }
         (data())->ret = upload_textures(ref, path);
         free(path);
         *i += j;

@@ -13,8 +13,8 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-#include "../ressource/libft/include/libft.h"
-#include "../mlx_linux/mlx.h"
+#include "libft.h"
+#include "../mlx/mlx.h"
 #include <math.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -25,7 +25,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#define ROTATE_SPEED 0.15
+#define ROTATE_SPEED 0.1
 #define FWD_SPEED 0.15
 #define BWD_SPEED 0.1
 #define SIDE_SPEED 0.1
@@ -129,5 +129,7 @@ void move_up(void);
 void turn_right(void);
 int iset(int *to_set, int value, int ret);
 void init_values(void);
+int ft_putstr_fd(char *s, int fd);
+int ft_ischarset(char *str, char c);
 
 #endif

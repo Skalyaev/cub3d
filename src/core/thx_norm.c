@@ -78,3 +78,24 @@ int fill_colors(int l, int ref, int colors[3])
         }
         return (1);
 }
+
+int ft_ischarset(char *str, char c)
+{
+        unsigned int i;
+
+        i = 0;
+        while (str[i])
+        {
+                if (str[i] == c)
+                        return (1);
+                i++;
+        }
+        return (0);
+}
+
+int ft_putstr_fd(char *s, int fd)
+{
+        while (s && *s++)
+                write(fd, (s - 1), 1);
+        return (1);
+}
