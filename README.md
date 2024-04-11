@@ -1,4 +1,4 @@
-# <p align="center">cub3D</p>
+# cub3D
 > *Ce projet est inspiré du jeu Wolfenstein 3D, considéré comme le premier FPS jamais développé. Il vous permettra d'explorer la technique du raycasting.*
 
 Les objectifs de ce projet sont similaires à ceux de tous les autres projets et incluent la rigueur, l'utilisation du langage C, l'application d'algorithmes de base, la recherche d'informations, etc.
@@ -8,7 +8,7 @@ En tant que projet de conception graphique, Cub3D vous permettra de développer 
 En conclusion, Cub3D offre une plateforme remarquable pour explorer les applications pratiques des mathématiques sans avoir à en comprendre toutes les spécificités. Grâce aux nombreux documents disponibles sur internet, vous utiliserez les mathématiques comme outil pour créer des algorithmes élégants et efficaces.
 
 ## Preview
-![](https://github.com/Skalyaeve/images/blob/main/screenshot/cub3d.gif)
+![](https://github.com/Skalyaeve/images/blob/main/screenshot/tsd.gif)
 
 ## Install
 ```bash
