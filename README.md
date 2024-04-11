@@ -1,4 +1,4 @@
-# cub3D
+# <p align="center">cub3D</p>
 > *Ce projet est inspiré du jeu Wolfenstein 3D, considéré comme le premier FPS jamais développé. Il vous permettra d'explorer la technique du raycasting.*
 
 Les objectifs de ce projet sont similaires à ceux de tous les autres projets et incluent la rigueur, l'utilisation du langage C, l'application d'algorithmes de base, la recherche d'informations, etc.
