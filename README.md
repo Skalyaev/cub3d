@@ -8,7 +8,7 @@ En tant que projet de conception graphique, Cub3D vous permettra de développer 
 En conclusion, Cub3D offre une plateforme remarquable pour explorer les applications pratiques des mathématiques sans avoir à en comprendre toutes les spécificités. Grâce aux nombreux documents disponibles sur internet, vous utiliserez les mathématiques comme outil pour créer des algorithmes élégants et efficaces.
 
 ## Preview
-![](https://github.com/Skalyaeve/images/blob/main/screenshot/cub3d.gif)
+![](https://github.com/Skalyaeve/images-1/blob/main/screenshot/cub3d.gif)
 
 ## Install
 ```bash
