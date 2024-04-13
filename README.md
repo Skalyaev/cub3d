@@ -7,10 +7,10 @@
 >
 > *En conclusion, Cub3D offre une plateforme remarquable pour explorer les applications pratiques des mathématiques sans avoir à en comprendre toutes les spécificités. Grâce aux nombreux documents disponibles sur internet, vous utiliserez les mathématiques comme outil pour créer des algorithmes élégants et efficaces.*
 
-## Aperçu
+## Preview
 ![](https://github.com/Skalyaeve/images-1/blob/main/screenshot/cub3d.gif)
 
-## Installer
+## Install
 ```bash
 sudo apt update -y
 sudo apt install -y unzip
@@ -39,19 +39,20 @@ ln -s $PWD/src $HOME/.local/src/$name
 ln -s $PWD/include $HOME/.local/include/$name
 ```
 
-## Utiliser
+## Usage
 ```bash
 export PATH=$HOME/.local/bin:$PATH
 cub3d <map>
 ```
 
-## Désinstaller
+## Uninstall
 ```bash
 name=cub3d
 
-rm -r $name
+rm -rf $name
 rm $HOME/.local/bin/$name
 rm $HOME/.local/share/$name
 rm $HOME/.local/src/$name
 rm $HOME/.local/include/$name
 ```
+
