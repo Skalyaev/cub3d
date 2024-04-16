@@ -24,7 +24,7 @@ void init_data(void)
         data();
         (data())->mlx.ptr = NULL;
         (data())->mlx.win = NULL;
-        (data())->map.map = NULL;
+        (daa())->map.map = NULL;
         (data())->map.map_infos = NULL;
         (data())->map.c_color = -1;
         (data())->map.f_color = -1;
